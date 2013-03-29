@@ -8,3 +8,5 @@
 /composer.phar
 /nbproject/
 composer.lock
+/app/config/config.yml
+/app/config/parameters.yml
