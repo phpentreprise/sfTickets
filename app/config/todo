@@ -1,2 +1,5 @@
-- Configure database
+- Configure database : 
+parameters.yml
+OK
+- Import mapping 
 - Generate entities

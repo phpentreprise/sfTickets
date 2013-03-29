@@ -1,0 +1,7 @@
+- When I tried to import the mapping from the database based on workbench databased generation I have this error :
+[Doctrine\ORM\Mapping\MappingException]                                              
+  Property "user" in "Ticket" was already declared, but it must be declared only once
+
+It was due to the fact that doctrine does not recognise composite primary key and don't like primary key usage as foreign key in other related table.
+
+The solution was to make the composite primary key as two foreign keys and add new primary key

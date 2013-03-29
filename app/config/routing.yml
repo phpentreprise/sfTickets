@@ -1,0 +1,4 @@
+sf_tickets_entities:
+    resource: "@SfTicketsEntitiesBundle/Resources/config/routing.yml"
+    prefix:   /
+
