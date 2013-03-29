@@ -1,6 +1,0 @@
-
-Generate SfTicketsBundle 
-php app/console generate:bundle
-
-Import Doctrine Mapping From database
-php app/console doctrine:mapping:import SfTicketsEntitiesBundle annotation
