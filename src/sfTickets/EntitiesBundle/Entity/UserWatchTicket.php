@@ -42,4 +42,60 @@ class UserWatchTicket
     private $user;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set ticket
+     *
+     * @param \sfTickets\EntitiesBundle\Entity\Ticket $ticket
+     * @return UserWatchTicket
+     */
+    public function setTicket(\sfTickets\EntitiesBundle\Entity\Ticket $ticket = null)
+    {
+        $this->ticket = $ticket;
+    
+        return $this;
+    }
+
+    /**
+     * Get ticket
+     *
+     * @return \sfTickets\EntitiesBundle\Entity\Ticket 
+     */
+    public function getTicket()
+    {
+        return $this->ticket;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \sfTickets\EntitiesBundle\Entity\User $user
+     * @return UserWatchTicket
+     */
+    public function setUser(\sfTickets\EntitiesBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+    
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \sfTickets\EntitiesBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
