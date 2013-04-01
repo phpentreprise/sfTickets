@@ -4,3 +4,17 @@ parameters.yml......................OK
 - Generate entities.................OK
 
 
+UserBundle : 
+
+1- A user can register and update account information
+2- A user can login and get redirected to a dashboard page
+3- A user can request remove of his account from the super user
+
+
+- Create register page for user bundle
+- Create profile page (User info)
+- Create edit profile page
+- Create remove request button
+- Add Security layer for users
+
+
