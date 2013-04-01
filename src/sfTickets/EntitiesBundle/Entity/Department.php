@@ -1,16 +1,16 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TicketStatus
+ * Department
  *
- * @ORM\Table(name="ticket_status")
+ * @ORM\Table(name="department")
  * @ORM\Entity
  */
-class TicketStatus
+class Department
 {
     /**
      * @var integer
@@ -31,9 +31,9 @@ class TicketStatus
     /**
      * @var string
      *
-     * @ORM\Column(name="created_by", type="string", length=45, nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $createdBy;
+    private $description;
 
     /**
      * @var \DateTime
@@ -45,9 +45,9 @@ class TicketStatus
     /**
      * @var string
      *
-     * @ORM\Column(name="updated_by", type="string", length=45, nullable=false)
+     * @ORM\Column(name="created_by", type="string", length=45, nullable=false)
      */
-    private $updatedBy;
+    private $createdBy;
 
     /**
      * @var \DateTime
@@ -55,6 +55,23 @@ class TicketStatus
      * @ORM\Column(name="updated_at", type="datetime", nullable=false)
      */
     private $updatedAt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="updated_by", type="string", length=45, nullable=false)
+     */
+    private $updatedBy;
+
+    /**
+     * @var \Company
+     *
+     * @ORM\ManyToOne(targetEntity="Company")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="company_id", referencedColumnName="id")
+     * })
+     */
+    private $company;
 
 
 }

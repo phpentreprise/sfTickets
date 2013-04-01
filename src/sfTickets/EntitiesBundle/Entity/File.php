@@ -1,6 +1,6 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

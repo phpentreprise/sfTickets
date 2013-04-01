@@ -1,6 +1,6 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\DependencyInjection;
+namespace sfTickets\EntitiesBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

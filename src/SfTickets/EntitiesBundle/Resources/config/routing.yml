@@ -1,3 +1,0 @@
-sf_tickets_entities_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: SfTicketsEntitiesBundle:Default:index }

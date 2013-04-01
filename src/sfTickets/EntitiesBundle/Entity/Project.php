@@ -1,16 +1,16 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Company
+ * Project
  *
- * @ORM\Table(name="company")
+ * @ORM\Table(name="project")
  * @ORM\Entity
  */
-class Company
+class Project
 {
     /**
      * @var integer
@@ -20,6 +20,27 @@ class Company
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="visibility", type="integer", nullable=true)
+     */
+    private $visibility;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activated", type="integer", nullable=true)
+     */
+    private $activated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="parent_id", type="integer", nullable=true)
+     */
+    private $parentId;
 
     /**
      * @var string
@@ -38,30 +59,23 @@ class Company
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=100, nullable=true)
+     * @ORM\Column(name="website", type="string", length=100, nullable=true)
      */
-    private $address;
+    private $website;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=30, nullable=true)
+     * @ORM\Column(name="hosting_infos", type="text", nullable=true)
      */
-    private $country;
+    private $hostingInfos;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="siret_number", type="string", length=30, nullable=true)
+     * @ORM\Column(name="slug", type="string", length=45, nullable=false)
      */
-    private $siretNumber;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="tva_number", type="string", length=45, nullable=true)
-     */
-    private $tvaNumber;
+    private $slug;
 
     /**
      * @var string

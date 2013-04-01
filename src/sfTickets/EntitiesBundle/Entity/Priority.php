@@ -1,16 +1,16 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Role
+ * Priority
  *
- * @ORM\Table(name="role")
+ * @ORM\Table(name="priority")
  * @ORM\Entity
  */
-class Role
+class Priority
 {
     /**
      * @var integer
@@ -24,9 +24,9 @@ class Role
     /**
      * @var string
      *
-     * @ORM\Column(name="role", type="string", length=45, nullable=true)
+     * @ORM\Column(name="priority", type="string", length=45, nullable=true)
      */
-    private $role;
+    private $priority;
 
     /**
      * @var string
@@ -50,9 +50,9 @@ class Role
     private $updatedBy;
 
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="updated_at", type="string", length=45, nullable=false)
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
      */
     private $updatedAt;
 

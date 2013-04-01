@@ -1,16 +1,16 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * UserWatchTicket
+ * ProjectHasUser
  *
- * @ORM\Table(name="user_watch_ticket")
+ * @ORM\Table(name="project_has_user")
  * @ORM\Entity
  */
-class UserWatchTicket
+class ProjectHasUser
 {
     /**
      * @var integer
@@ -22,14 +22,21 @@ class UserWatchTicket
     private $id;
 
     /**
-     * @var \Ticket
+     * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Ticket")
+     * @ORM\Column(name="project_user_role", type="integer", nullable=true)
+     */
+    private $projectUserRole;
+
+    /**
+     * @var \Project
+     *
+     * @ORM\ManyToOne(targetEntity="Project")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ticket_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      * })
      */
-    private $ticket;
+    private $project;
 
     /**
      * @var \User

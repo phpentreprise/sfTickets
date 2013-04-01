@@ -1,16 +1,16 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Priority
+ * Evolution
  *
- * @ORM\Table(name="priority")
+ * @ORM\Table(name="evolution")
  * @ORM\Entity
  */
-class Priority
+class Evolution
 {
     /**
      * @var integer
@@ -22,11 +22,11 @@ class Priority
     private $id;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="priority", type="string", length=45, nullable=true)
+     * @ORM\Column(name="percentage", type="float", nullable=true)
      */
-    private $priority;
+    private $percentage;
 
     /**
      * @var string
@@ -52,7 +52,7 @@ class Priority
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
     private $updatedAt;
 

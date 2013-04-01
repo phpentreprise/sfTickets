@@ -1,5 +1,5 @@
 parameters:
-#    sf_tickets_entities.example.class: SfTickets\EntitiesBundle\Example
+#    sf_tickets_entities.example.class: sfTickets\EntitiesBundle\Example
 
 services:
 #    sf_tickets_entities.example:

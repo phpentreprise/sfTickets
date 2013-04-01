@@ -1,16 +1,16 @@
 <?php
 
-namespace SfTickets\EntitiesBundle\Entity;
+namespace sfTickets\EntitiesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * UserInfo
+ * Company
  *
- * @ORM\Table(name="user_info")
+ * @ORM\Table(name="company")
  * @ORM\Entity
  */
-class UserInfo
+class Company
 {
     /**
      * @var integer
@@ -24,30 +24,44 @@ class UserInfo
     /**
      * @var string
      *
-     * @ORM\Column(name="phone", type="string", length=45, nullable=true)
+     * @ORM\Column(name="name", type="string", length=45, nullable=true)
      */
-    private $phone;
+    private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mobile", type="string", length=45, nullable=true)
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $mobile;
+    private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="skype", type="string", length=45, nullable=true)
+     * @ORM\Column(name="address", type="string", length=100, nullable=true)
      */
-    private $skype;
+    private $address;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="website", type="string", length=45, nullable=true)
+     * @ORM\Column(name="country", type="string", length=30, nullable=true)
      */
-    private $website;
+    private $country;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="siret_number", type="string", length=30, nullable=true)
+     */
+    private $siretNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tva_number", type="string", length=45, nullable=true)
+     */
+    private $tvaNumber;
 
     /**
      * @var string
@@ -76,16 +90,6 @@ class UserInfo
      * @ORM\Column(name="updated_at", type="datetime", nullable=false)
      */
     private $updatedAt;
-
-    /**
-     * @var \User
-     *
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
-     * })
-     */
-    private $user;
 
 
 }
