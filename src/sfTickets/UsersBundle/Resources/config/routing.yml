@@ -1,0 +1,3 @@
+sf_tickets_user_homepage:
+    pattern:  /user/{name}
+    defaults: { _controller: sfTicketsUsersBundle:User:index }

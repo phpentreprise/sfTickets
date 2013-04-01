@@ -1,5 +1,5 @@
 sf_tickets_user:
-    resource: "@sfTicketsUserBundle/Resources/config/routing.yml"
+    resource: "@sfTicketsUsersBundle/Resources/config/routing.yml"
     prefix:   /
 
 sf_tickets_tickets:

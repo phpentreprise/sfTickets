@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new sfTickets\EntitiesBundle\sfTicketsEntitiesBundle(),
             new sfTickets\TicketsBundle\sfTicketsTicketsBundle(),
-            new sfTickets\UserBundle\sfTicketsUserBundle(),
+            new sfTickets\UsersBundle\sfTicketsUsersBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

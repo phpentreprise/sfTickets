@@ -4,7 +4,7 @@ parameters.yml......................OK
 - Generate entities.................OK
 
 
-UserBundle : 
+UsersBundle : 
 
 1- A user can register and update account information
 2- A user can login and get redirected to a dashboard page

@@ -1,5 +1,5 @@
 parameters:
-#    sf_tickets_user.example.class: sfTickets\UserBundle\Example
+#    sf_tickets_user.example.class: sfTickets\UsersBundle\Example
 
 services:
 #    sf_tickets_user.example:

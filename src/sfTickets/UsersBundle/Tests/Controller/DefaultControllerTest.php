@@ -1,6 +1,6 @@
 <?php
 
-namespace sfTickets\UserBundle\Tests\Controller;
+namespace sfTickets\UsersBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
