@@ -1,16 +1,16 @@
 <?php
 
-namespace sfTickets\EntitiesBundle\Entity;
+namespace sfTickets\TicketsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TicketStatus
+ * Evolution
  *
- * @ORM\Table(name="ticket_status")
+ * @ORM\Table(name="evolution")
  * @ORM\Entity
  */
-class TicketStatus
+class Evolution
 {
     /**
      * @var integer
@@ -22,11 +22,11 @@ class TicketStatus
     private $id;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="name", type="string", length=45, nullable=true)
+     * @ORM\Column(name="percentage", type="float", nullable=true)
      */
-    private $name;
+    private $percentage;
 
     /**
      * @var string
@@ -52,7 +52,7 @@ class TicketStatus
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
     private $updatedAt;
 
@@ -69,33 +69,33 @@ class TicketStatus
     }
 
     /**
-     * Set name
+     * Set percentage
      *
-     * @param string $name
-     * @return TicketStatus
+     * @param float $percentage
+     * @return Evolution
      */
-    public function setName($name)
+    public function setPercentage($percentage)
     {
-        $this->name = $name;
+        $this->percentage = $percentage;
     
         return $this;
     }
 
     /**
-     * Get name
+     * Get percentage
      *
-     * @return string 
+     * @return float 
      */
-    public function getName()
+    public function getPercentage()
     {
-        return $this->name;
+        return $this->percentage;
     }
 
     /**
      * Set createdBy
      *
      * @param string $createdBy
-     * @return TicketStatus
+     * @return Evolution
      */
     public function setCreatedBy($createdBy)
     {
@@ -118,7 +118,7 @@ class TicketStatus
      * Set createdAt
      *
      * @param \DateTime $createdAt
-     * @return TicketStatus
+     * @return Evolution
      */
     public function setCreatedAt($createdAt)
     {
@@ -141,7 +141,7 @@ class TicketStatus
      * Set updatedBy
      *
      * @param string $updatedBy
-     * @return TicketStatus
+     * @return Evolution
      */
     public function setUpdatedBy($updatedBy)
     {
@@ -164,7 +164,7 @@ class TicketStatus
      * Set updatedAt
      *
      * @param \DateTime $updatedAt
-     * @return TicketStatus
+     * @return Evolution
      */
     public function setUpdatedAt($updatedAt)
     {
