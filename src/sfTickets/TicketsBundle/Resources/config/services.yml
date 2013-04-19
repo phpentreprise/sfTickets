@@ -1,7 +1,8 @@
 parameters:
-#    sf_tickets_tickets.example.class: sfTickets\TicketsBundle\Example
+    sf_tickets_tickets.manager.class:     sfTickets\TicketsBundle\EntityManager\TicketManager
+    sf_tickets_tickets.entity.class:          sfTickets\TicketsBundle\Entity\Ticket
 
 services:
-#    sf_tickets_tickets.example:
-#        class: %sf_tickets_tickets.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+     sf_tickets_tickets.manager:
+         class: %sf_tickets_tickets.manager.class%
+         arguments:    ["@doctrine", "%sf_tickets_tickets.entity.class%"]

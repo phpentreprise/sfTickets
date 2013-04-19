@@ -1,13 +1,32 @@
 <?php
 
+/**
+* This file is part of the sfTickets project.
+*
+* (c) ...
+*/
+
 namespace sfTickets\TicketsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class TicketController extends Controller
 {
-    public function indexAction($name)
+    /**
+     *  Shows the list of tickets
+     * 
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function indexAction(Request $request)
     {
-        return $this->render('sfTicketsTicketsBundle:Default:index.html.twig', array('name' => $name));
+        
+        $options = array();
+
+        $tickets = $this->container->get('sf_tickets_tickets.manager')->findTickets();
+        
+        
+        
+        return $this->render('sfTicketsTicketsBundle:Ticket:index.html.twig');
     }
 }

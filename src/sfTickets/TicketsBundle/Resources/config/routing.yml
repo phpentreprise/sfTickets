@@ -1,3 +1,3 @@
 sf_tickets_tickets_homepage:
-    pattern:  /ticket/{name}
+    pattern:  /tickets
     defaults: { _controller: sfTicketsTicketsBundle:Ticket:index }
