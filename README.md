@@ -10,3 +10,5 @@ This is the first commit after the first build
 This is added after connecting jenkins to 
 
 This is a new line to be tested
+
+This is a line added from upstream
