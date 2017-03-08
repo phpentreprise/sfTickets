@@ -1,3 +1,3 @@
 test
 test from remote upstream
-test2 from local B1
+test2 from remote upstream
